@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="/images/browser-icon.png">
+    <title>Weatherford Animal Sanctuary</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="top-left" class="header">
+            <nav>
+                <ul id="nav-ul">
+                    <li>
+                        <a href="dogs.html">DOGS</a>
+                    </li>
+                    <li>
+                        <a href="cats.html">CATS</a>
+                    </li>
+                    <li>
+                        <a href="horses.html">HORSES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="top-center" class="header">
+            <a id="logo-img" href="index.html"><img id="logo" src="/images/weatherford-header-logo.png"
+                    alt="weatherford animal rescue logo"></a>
+        </div>
+        <div id="top-right" class="header">
+            <li>
+                <a href="favorites.html"><img id="favorites-logo" src="/images/heart-on.png"
+                        alt="favorites page link image"></a>
+            </li>
+        </div>
+    </header>
+    <main>
+
+        <style>
+            body,
+            html {
+                height: 100%;
+            }
+
+            .parallax {
+                background-image: url("/images/index-main-banner.jpg");
+
+                height: 100%;
+
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .parallax-2 {
+                background-image: url("/images/dog-in-lavender-field.jpg");
+
+                height: 100%;
+
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .parallax-3 {
+                background-image: url("/images/index-horse-banner.jpg");
+
+                height: 100%;
+
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+        <div class="parallax"></div>
+
+        <div style="height:400px;background-color:rgb(248, 241, 241);font-size:36px">
+            <h4 id="about-page">About Weatherford Animal Sanctuary</h4>
+            <div id="flex-for-about">
+                <img id="about-img" src="/images/about-dog.jpg">
+                <div class="text-box">
+                    <p>Weatherford Animal Sanctuary is a 501(c)(3) non-profit organization dedicated to rescuing and
+                        rehabilitating abused, neglected, abandoned, or unwanted animals. We provide food, shelter,
+                        care, and handling to all of our animals to assist in finding them compatible, loving, and
+                        permanent adoptive homes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax-2"></div>
+
+        <section style="height:400px;background-color:rgb(248, 241, 241);font-size:36px">
+            <h4 id="week-text">Animals of the Month</h4>
+            <section id="animals-of-week">
+                <div class="animal-cards">
+                    <article class="animal-card">
+                        <div class="animal-info">
+                            <h4 id="animal-name" class="animal-name action">Oatmeal</h4>
+                            <p id="animal-breed" class="animal-breed">Domestic Short Hair</p>
+                        </div>
+                        <div class="animal-image container">
+                            <img class="image" src="/images/oatmeal.png"
+                                alt="an adorable cat named Oatmeal who is up for adoption">
+                                <div class="middle">
+                                    <a href="animal-profile.html?animalId=14"><button class="adopt-me">Adopt Me!</button></a>
+                                  </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="animal-cards">
+                    <article class="animal-card">
+                        <div class="animal-info">
+                            <h4 id="animal-name2" class="animal-name action">Blue</h4>
+                            <p id="animal-breed2" class="animal-breed">Mustang</p>
+                        </div>
+                        <div class="animal-image container">
+                            <img class="image" src="/images/blue.png"
+                                alt="an adorable carolina dog named Dottie who is up for adoption">
+                                <div class="middle">
+                                    <a href="animal-profile.html?animalId=27"><button class="adopt-me">Adopt Me!</button></a>
+                                  </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="animal-cards">
+                    <article class="animal-card">
+                        <div class="animal-info">
+                            <h4 id="animal-name3" class="animal-name action">Dottie</h4>
+                            <p id="animal-breed3" class="animal-breed">Carolina Dog</p>
+                        </div>
+                        <div class="animal-image container">
+                            <img class="image" src="/images/dottie.png"
+                                alt="an adorable carolina dog named Dottie who is up for adoption">
+                                <div class="middle">
+                                    <a href="animal-profile.html?animalId=9"><button class="adopt-me">Adopt Me!</button></a>
+                                  </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <div class="parallax-3"></div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

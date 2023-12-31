@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="/images/browser-icon.png">
+    <title>Weatherford Animal Sanctuary</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+    <script src="horses.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="top-left" class="header">
+            <nav>
+                <ul id="nav-ul">
+
+                    <li>
+                        <a href="dogs.html">DOGS</a>
+                    </li>
+                    <li>
+                        <a href="cats.html">CATS</a>
+                    </li>
+                    <li>
+                        <a href="horses.html">HORSES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="top-center" class="header">
+            <a href="index.html"><img id="logo" src="/images/weatherford-header-logo.png"
+                    alt="weatherford animal rescue logo"></a>
+        </div>
+        <div id="top-right" class="header">
+            <li>
+                <a href="favorites.html"><img id="favorites-logo" src="/images/heart-on.png"
+                        alt="favorites page link image"></a>
+            </li>
+        </div>
+    </header>
+    <main id="horse-main">
+
+        <style>
+            body,
+            html {
+                height: 100%;
+            }
+
+            .horse-parallax {
+                background-image: url("/images/horse-page-banner.jfif");
+
+                height: 100%;
+
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+
+        <div class="horse-parallax"></div>
+        <section id="card-container">
+
+        </section>
+
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

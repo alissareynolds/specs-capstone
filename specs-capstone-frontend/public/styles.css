@@ -1,0 +1,430 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    overflow-y: auto;
+    background-color: rgb(248, 241, 241);
+    grid-area: main;
+}
+
+header {
+    background-color: rgb(245, 231, 239);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 3px rgb(169, 190, 178) ridge;
+}
+
+.header {
+    flex: 1 1 0;
+    align-items: center;
+}
+
+header>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer {
+    background-color: rgb(169, 190, 178);
+    grid-area: footer;
+}
+
+#logo {
+    max-height: 10vh;
+    width: auto;
+}
+
+#home-page-puppies {
+    width: 100%;
+    text-align: center;
+}
+
+#home-page-photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 3px rgb(169, 190, 178) ridge;
+    position: relative;
+}
+
+#nav-ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+a {
+    color: rgb(140, 161, 149);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#top-left {
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+#top-right {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#favorites-logo {
+    max-height: 7vh;
+    width: auto;
+}
+
+.heart {
+    width: 35px;
+    align-self: flex-start;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.centered {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(169, 190, 178);
+    text-shadow: 2px 2px white;
+}
+
+.sub-heading {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 2px 2px rgb(169, 190, 178);
+}
+
+#card-container {
+    justify-self: center;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 75px;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 40px;
+}
+
+.animal-card {
+    display: grid;
+    grid-template-rows: 25px 40px 165px 20px;
+    grid-template-areas: "sku price"
+        "name name"
+        "img img"
+        " . cart"
+    ;
+    grid-template-columns: 7fr 3fr;
+    width: 250px;
+    height: 250px;
+    padding: 5px;
+    background-color: rgba(240, 198, 218, 0.4);
+    border: 1px solid rgb(169, 190, 178);
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgb(169, 190, 178);
+}
+
+.animal-info {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    align-self: center;
+    grid-area: name;
+    padding-bottom: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#heart-off {
+    width: 40px;
+}
+
+.animal-name {
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+.animal-breed {
+    text-align: center;
+    margin: 0px;
+}
+
+div.animal-image {
+    grid-area: img;
+    padding: 1px;
+    text-align: center;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+div.animal-image>img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.action {
+    cursor: pointer;
+}
+
+.icon.action {
+    font-size: 1.2em;
+    color: rgb(169, 190, 178);
+}
+
+.action:hover {
+    color: #1e7558;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+#dog-banner-text {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(169, 190, 178);
+    text-shadow: 2px 2px white;
+}
+
+.container {
+    position: relative;
+}
+
+.image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 2;
+}
+
+.adopt-me {
+    background-color: rgb(169, 190, 178);
+    color: rgb(3, 2, 2);
+    font-size: 16px;
+    padding: 16px 32px;
+    padding: 8px;
+    border: ridge 2px white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+#about-page {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 20px;
+    margin-left: 100px;
+    color: rgb(70, 73, 71);
+    margin-bottom: 0px;
+}
+
+#about-img {
+    width: 25%;
+    margin-right: 150px;
+    border: ridge 5px rgb(169, 190, 178);
+    border-radius: 10px;
+    align-self: flex-end;
+    margin-bottom: 0px;
+}
+
+#flex-for-about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.text-box {
+    width: 500px;
+    height: 295px;
+    margin-left: 150px;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#week-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(70, 73, 71);
+    margin-bottom: 0px;
+}
+
+#animal-name {
+    font-size: 20px;
+}
+
+#animal-breed {
+    font-size: 20px;
+}
+
+#animal-name2 {
+    font-size: 20px;
+}
+
+#animal-breed2 {
+    font-size: 20px;
+}
+
+#animal-name3 {
+    font-size: 20px;
+}
+
+#animal-breed3 {
+    font-size: 20px;
+}
+
+#animals-of-week {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.profile-thumbnail {
+    margin-left: 33%;
+    width: 35%;
+    border: 5px ridge rgb(169, 190, 178);
+    border-radius: 10px;
+}
+
+.profile-name {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(70, 73, 71);
+}
+
+.profile-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#profile-container {
+    border: 15px rgb(169, 190, 178) ridge;
+    background-color: rgb(245, 231, 239);
+    margin: 60px;
+}
+
+.profile-info {
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+}
+
+.profile-imgs {
+    width: 500px;
+    margin-bottom: 30px;
+    border: 5px ridge rgb(169, 190, 178);
+    border-radius: 10px;
+}
+
+.profile-img-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 450px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+}
+
+@media only screen and (min-width: 451px) and (max-width: 1199px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 12% 1fr 5%;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 12% 1fr 5%;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+    }
+}
