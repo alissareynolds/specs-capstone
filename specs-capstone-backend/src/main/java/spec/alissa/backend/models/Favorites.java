@@ -2,42 +2,27 @@ package spec.alissa.backend.models;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 public class Favorites {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int favoriteId;
+    private int animalId;
 
-    @OneToMany
-    private List<Animals> favAnimals;
     private int userId;
-
-    public Favorites(int favoriteId, List<Animals> favAnimals, int userId) {
-        this.favoriteId = favoriteId;
-        this.favAnimals = favAnimals;
-        this.userId = userId;
-    }
 
     public Favorites() {
     }
 
-    public int getFavoriteId() {
-        return favoriteId;
+    public Favorites(int animalId, int userId) {
+        this.animalId = animalId;
+        this.userId = userId;
     }
 
-    public void setFavoriteId(int favoriteId) {
-        this.favoriteId = favoriteId;
+    public int getAnimalIdList() {
+        return animalId;
     }
 
-    public List<Animals> getFavAnimals() {
-        return favAnimals;
-    }
-
-    public void setFavAnimals(List<Animals> favAnimals) {
-        this.favAnimals = favAnimals;
+    public void setAnimalIdList(int animalId) {
+        this.animalId = animalId;
     }
 
     public int getUserId() {

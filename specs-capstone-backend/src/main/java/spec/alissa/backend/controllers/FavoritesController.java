@@ -29,21 +29,21 @@ public class FavoritesController {
         return favoritesRepository.findAll();
     }
 
-    /* WIP
-    @PostMapping("/api/favorite/{id}")
-    public void addFavorites(@PathVariable int id) {
-        Optional<Animals> optional = animalsRepository.findById(id);
-        if(optional.isPresent()){
-            Animals animal = optional.get();
-            Favorites favorites = new Favorites(null,animal,1);
-        }else{
-            try {
-                throw new AnimalDoesNotExistException("Animal with the name " + optional.get().getName() + " does not exist");
-            } catch (AnimalDoesNotExistException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
 
-     */
+//    @PostMapping("/api/favorite/{id}")
+//    public void addFavorites(@PathVariable int id) {
+//        Optional<Animals> optional = animalsRepository.findById(id);
+//        if(optional.isPresent()){
+//            Animals animal = optional.get();
+//            Favorites favorites = new Favorites(null,animal,1);
+//        }else{
+//            try {
+//                throw new AnimalDoesNotExistException("Animal with the name " + optional.get().getName() + " does not exist");
+//            } catch (AnimalDoesNotExistException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
+//    }
+
+
 }

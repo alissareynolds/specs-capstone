@@ -158,5 +158,5 @@
                  ('/images/blue-profile-6.jpg', 27);
 
 
-                 INSERT INTO users (first_name, username)
-                 VALUES ('Alissa', 'maggiemay');
+                 INSERT INTO users (first_name, username, email, password_hash)
+                 VALUES ('Alissa', 'maggiemay', 'alissa6710@gmail.com', 'maggie-is-the-best');

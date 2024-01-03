@@ -1,21 +1,30 @@
 package spec.alissa.backend.models;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 
 @Entity
 public class Animals {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int animalId;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private String gender;
+    @Column(nullable = false)
     private String breed;
+    @Column(nullable = false)
     private String birthdate;
+    @Column(nullable = false)
     private String thumbnail;
     private String height;
     private String color;
     private String weight;
+    @Column(length = 50000, nullable = false)
     private String info;
+    @Column(nullable = false)
     private String species_name;
 
     public Animals(int animalId, String name, String gender, String breed, String birthdate, String thumbnail, String height, String color, String weight, String info, String species_name) {
