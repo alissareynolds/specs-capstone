@@ -1,4 +1,4 @@
-package spec.alissa.backend.controllers.requests;
+package spec.alissa.backend.requests;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
