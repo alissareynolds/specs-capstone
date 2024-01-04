@@ -14,7 +14,7 @@ header {
     grid-area: header;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     border-bottom: 3px rgb(169, 190, 178) ridge;
 }
 
@@ -399,7 +399,7 @@ div.animal-image>img {
 }
 
 #login-main {
-    background-image: url("https://dhjhkxawhe8q4.cloudfront.net/yup-wp/wp-content/uploads/2022/01/27150328/trees-1209660.jpg");
+    background-image: url("/images/login-page-background.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -481,7 +481,6 @@ div.animal-image>img {
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding-left: 90px;
-    
 }
 
 #forgot-password:hover {
@@ -503,6 +502,92 @@ div.animal-image>img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+#register-main {
+    background-image: url("/images/register-image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#register-greeting {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    color: rgb(51, 61, 55);
+    width: 110%;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 0px;
+}
+
+#register-container {
+     /* background-color: rgb(136, 155, 144);
+    /* background-color: rgb(169, 190, 178);
+    */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    height: 400px;
+    /* box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4); */
+}
+
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-field {
+    width: 200%;
+    height: 30px;
+    border: solid 1px rgb(169, 190, 178);
+    margin-bottom: 10%;
+    margin-bottom: 35px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#register-button {
+    width: 80%;
+    height: 15%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:  rgb(245, 231, 239);
+    border-color:  rgb(245, 231, 239);
+    margin-top: 0px;
+}
+
+#register-form-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 73%;
+}
+
+#already-have-account-text {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 110%;
+}
+
+#login-link {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 @media only screen and (min-width: 450px) {
@@ -552,4 +637,5 @@ div.animal-image>img {
     .parallax {
         background-attachment: scroll;
     }
+
 }

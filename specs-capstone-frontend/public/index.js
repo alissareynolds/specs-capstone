@@ -31,7 +31,7 @@ function generateCard(animal) {
         <img class="image" src="${animal.thumbnail}" alt="${animal.summary}">
         <div class="middle">
             <a href="animal-profile.html?animalId=${animal.animal_id}">
-            <button class="adopt-me">
+            <button class="adopt-me")">
             Adopt Me!
             </button>
             </a>

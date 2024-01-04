@@ -28,7 +28,7 @@ public class AnimalsController {
         return animalsRepository.findAll();
     }
 
-    @GetMapping("/api/animals/{id}")
+    @GetMapping("/api/animals/profile/{id}")
     public Animals getAnimalById(@PathVariable int id) {
         Optional<Animals> optional = animalsRepository.findById(id);
         return optional.get();
