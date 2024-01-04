@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="/images/browser-icon.png">
+    <title>Weatherford Animal Sanctuary</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="top-left" class="header">
+            <nav>
+                <ul class="nav-ul">
+                    <li>
+                        <a href="dogs.html">DOGS</a>
+                    </li>
+                    <li>
+                        <a href="cats.html">CATS</a>
+                    </li>
+                    <li>
+                        <a href="horses.html">HORSES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="top-center" class="header">
+            <a id="logo-img" href="index.html"><img id="logo" src="/images/weatherford-header-logo.png"
+                    alt="weatherford animal rescue logo"></a>
+        </div>
+        <div id="top-right" class="header">
+            <li>
+                <a href="favorites.html"><img id="favorites-logo" src="/images/heart-on.png"
+                        alt="favorites page link image"></a>
+            </li>
+            <li class="nav-ul">
+                <a href="login.html">LOGIN</a>
+            </li>
+        </div>
+    </header>
+    <main id="login-main">
+        <section id="login-section">
+            <div id="login-text-box">
+                <h1 class="login-greeting">Welcome</h1>
+                <h1 id="greeting-text" class="login-greeting">Back</h1>
+                <p id="login-text">This is generic placeholder text for the login page. This is generic placeholder text
+                    for the login page. This is generic placeholder text for the login page.</p>
+
+            </div>
+
+            <div id="login-container">
+                <h2 class="login-text">Login to your Account</h2>
+                <form>
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username"><br>
+                    <label for="password">Password:</label><br>
+                    <input type="text" id="password" name="password">
+                    <div id="form-flex">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label id="remember-me-label" for="remember-me">Remember Me</label>
+                        <p id="forgot-password">Forgot Password?</p><br>
+                    </div>
+                    <input id="form-button" type="button" value="Login">
+                    <div id="register-text">   
+                        <p id="no-account-text">Don't have an account?</p>
+                        <a id="register-link" href="register.html">Create One</a>
+                    </div>
+                
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
