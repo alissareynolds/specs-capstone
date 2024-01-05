@@ -1,4 +1,5 @@
 const baseURL = "http://localhost:8080"
+let userId = 0;
 
 function displayCards(animals) {
     let container = document.getElementById('card-container');

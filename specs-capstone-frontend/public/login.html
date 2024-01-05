@@ -9,6 +9,7 @@
     <title>Weatherford Animal Sanctuary</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
+    <script src="login.js"></script>
 </head>
 
 <body>
@@ -54,7 +55,7 @@
 
             <div id="login-container">
                 <h2 class="login-text">Login to your Account</h2>
-                <form>
+                <form id="login-form">
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="username"><br>
                     <label for="password">Password:</label><br>
@@ -64,7 +65,7 @@
                         <label id="remember-me-label" for="remember-me">Remember Me</label>
                         <p id="forgot-password">Forgot Password?</p><br>
                     </div>
-                    <input id="form-button" type="button" value="Login">
+                    <input id="form-button" type="button" value="Login" onclick="buttonClicked()">
                     <div id="register-text">   
                         <p id="no-account-text">Don't have an account?</p>
                         <a id="register-link" href="register.html">Create One</a>

@@ -9,7 +9,6 @@ import spec.alissa.backend.models.Animals;
 import spec.alissa.backend.repository.AnimalsRepository;
 import spec.alissa.backend.services.AnimalService;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
