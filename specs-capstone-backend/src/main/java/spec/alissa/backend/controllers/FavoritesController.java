@@ -1,19 +1,13 @@
 package spec.alissa.backend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import spec.alissa.backend.exceptions.AnimalDoesNotExistException;
-import spec.alissa.backend.models.Animals;
 import spec.alissa.backend.models.Favorites;
 import spec.alissa.backend.repository.AnimalsRepository;
 import spec.alissa.backend.repository.FavoritesRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class FavoritesController {

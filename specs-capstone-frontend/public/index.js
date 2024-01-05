@@ -24,14 +24,14 @@ function generateCard(animal) {
     card.innerHTML = `
     
     <div class="animal-info">
-    <img id="${animal.animal_id}" src="${heartSrc}" class="heart">
+    <img id="${animal.animalId}" src="${heartSrc}" class="heart">
     <h4 class="animal-name action">${animal.name}</h4>
         <p class="animal-breed">${animal.breed}</p>
     </div>
     <div class="animal-image container" >
         <img class="image" src="${animal.thumbnail}" alt="${animal.summary}">
         <div class="middle">
-            <a href="animal-profile.html?animalId=${animal.animal_id}">
+            <a href="animal-profile.html?animalId=${animal.animalId}">
             <button class="adopt-me")">
             Adopt Me!
             </button>

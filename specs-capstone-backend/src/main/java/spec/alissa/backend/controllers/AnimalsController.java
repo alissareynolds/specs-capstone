@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import spec.alissa.backend.models.Animals;
+import spec.alissa.backend.models.Animal;
 import spec.alissa.backend.repository.AnimalsRepository;
 import spec.alissa.backend.services.AnimalService;
 
@@ -23,18 +23,18 @@ public class AnimalsController {
     AnimalsRepository animalsRepository;
 
     @GetMapping("/api/animals")
-    public List<Animals> getAnimals() {
+    public List<Animal> getAnimals() {
         return animalsRepository.findAll();
     }
 
     @GetMapping("/api/animals/profile/{id}")
-    public Animals getAnimalById(@PathVariable int id) {
-        Optional<Animals> optional = animalsRepository.findById(id);
+    public Animal getAnimalById(@PathVariable int id) {
+        Optional<Animal> optional = animalsRepository.findById(id);
         return optional.get();
     }
 
     @GetMapping("/api/species/{species}")
-    public List<Animals> getAnimalsBySpecies(@PathVariable String species) {
+    public List<Animal> getAnimalsBySpecies(@PathVariable String species) {
         return animalService.getAnimalsBySpecies(species);
     }
 }
