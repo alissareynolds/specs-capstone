@@ -29,13 +29,10 @@ public class User {
     @Column(length = 100)
     private String password_hash;
 
-//    @OneToMany()
-//    private List<Animal> animals;
-
     @ManyToMany
     @JoinTable(name = "user_animal",
-            joinColumns = { @JoinColumn(name = "user") },
-            inverseJoinColumns = { @JoinColumn(name = "animal") })
+            joinColumns = { @JoinColumn(name = "FK_user") },
+            inverseJoinColumns = { @JoinColumn(name = "FK_animal") })
     @JsonIgnoreProperties({"users"})
     private List<Animal> animals = new ArrayList<>();
 
