@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import spec.alissa.backend.requests.LoginRequest;
 import spec.alissa.backend.requests.RegisterRequest;
-import spec.alissa.backend.models.Users;
+import spec.alissa.backend.models.User;
 import spec.alissa.backend.services.AuthService;
 
 @CrossOrigin(origins = "http://127.0.0.1:5501")
@@ -20,12 +20,12 @@ public class AuthController {
     AuthService authService;
 
     @PostMapping("/api/login")
-    public Users loginToAccount(@Validated @RequestBody LoginRequest loginRequest) {
+    public User loginToAccount(@Validated @RequestBody LoginRequest loginRequest) {
         return authService.loginToAnAccount(loginRequest);
     }
 
     @PostMapping("/api/register")
-    public Users registerAccount(@Validated @RequestBody RegisterRequest registerRequest) {
+    public User registerAccount(@Validated @RequestBody RegisterRequest registerRequest) {
         return authService.registerAnAccount(registerRequest);
     }
 }

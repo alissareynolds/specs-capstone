@@ -1,5 +1,5 @@
 const baseURL = "http://localhost:8080"
-let userId = 0;
+let userId;
 
 function displayCards(animals) {
     let container = document.getElementById('card-container');
@@ -38,5 +38,22 @@ function generateCard(animal) {
             </a>
             </div>
     </div>`
+
+    let heartImage = card.querySelector('.heart');
+    heartImage.addEventListener('click', () => {
+        if (animal.isfavorite) {
+            axios.delete(`http://localhost:8080/api/animals/favorite/${userId}/${animal.animalId}`).then(() => {
+                heartImage.setAttribute("src", "/images/heart-off.png");
+                animal.isfavorite = false;
+            })
+        } else {
+            axios.post(`http://localhost:8080/api/animals/favorite/${userId}/${animal.animalId}`)
+                .then(() => {
+                    heartImage.setAttribute("src", "/images/heart-on.png");
+                    animal.isfavorite = true;
+                });
+        }
+    });
     return card;
+
 }

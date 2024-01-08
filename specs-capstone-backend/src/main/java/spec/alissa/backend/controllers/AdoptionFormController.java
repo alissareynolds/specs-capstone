@@ -3,7 +3,7 @@ package spec.alissa.backend.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import spec.alissa.backend.models.AdoptionForm;
-import spec.alissa.backend.models.Users;
+import spec.alissa.backend.models.User;
 import spec.alissa.backend.repository.AdoptionFormRepository;
 import spec.alissa.backend.repository.UsersRepository;
 import spec.alissa.backend.requests.AdoptionFormRequest;
@@ -30,7 +30,7 @@ public class AdoptionFormController {
 
     @PostMapping("/api/adoption-form/add/{userId}")
     public AdoptionForm postAdoptionForm(@PathVariable Integer userId, @RequestBody AdoptionFormRequest adoptionFormRequest) {
-        Optional<Users> user = usersRepository.findById(userId);
+        Optional<User> user = usersRepository.findById(userId);
         if (user.isPresent()) {
             return adoptionFormService.addAdoptionForm(userId, adoptionFormRequest);
         }

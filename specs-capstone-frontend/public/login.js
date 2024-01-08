@@ -9,11 +9,18 @@ function buttonClicked() {
         "password": password.value
     }
     loginRequest(body);
+    location.replace("index.html");
 }
 
 function loginRequest(body) {
-    axios.post(`${baseURL}/api/login`, body).then(({ data }) => { console.log(data);})
+    axios.post(`${baseURL}/api/login`, body).then(({ data }) => { console.log(data);
+        userId = data.userId;
+        console.log("userId", userId);
+    })
+
 
 }
 
 button.addEventListener("click", buttonClicked);
+
+

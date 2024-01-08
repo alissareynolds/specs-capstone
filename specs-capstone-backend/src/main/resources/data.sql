@@ -1,3 +1,4 @@
+
  INSERT INTO animals (name, gender, breed, birthdate, thumbnail, height, color, weight, info, species_name)
          VALUES
          ('Jeffery', 'male', 'Labrador Retriever', '09/21/2022', '/images/jeffery.png', null, null, null, 'Who does not love a class clown. The kid silly enough to make sure you enjoy all their antics. The one who will always make you smile and will probably get you to laugh too. That is  Jeffrey! This boy is super sweet and an absolute riot! He is goofy and fun in true lab fashion and we know his funny personality is going to make you giggle just as much as we are. If a silly personality is not enough to win you over he has the most beautiful eyes and is incredibly affectionate too. Basically the perfect dog to entertain you on the most boring of days! Jeffery was not always our favorite class clown. He sadly found himself at the city shelter. Alone and unwanted he was one of dozens of juvenile pups hoping to get noticed. The ''teen'' aged dogs have it pretty bad right now. They are one of the biggest groups of dogs both surrendered and abandoned at shelters nationwide. No one seems to want them and shelters are drowning in these juvenile dogs who just want their chance at life. Sadly these young dogs often have minimal training and no manners to speak of and this hurts their chances at adoption even more. Jeffery''s fun personality has guaranteed he is getting his chance. We can make sure he gets the training he needs and showcase his silliness so just the right people notice. We are not the only  humans who love a goofy pup. If you like the silly ones too apply to make Jeffery part of your fun loving family.', 'Dog'),
@@ -157,6 +158,7 @@
                  ('/images/blue-profile-5.jpg', 27),
                  ('/images/blue-profile-6.jpg', 27);
 
+          INSERT INTO users (first_name, username, email, password_hash)
+          VALUES ('Alissa', 'maggiemay', 'alissa6710@gmail.com', 'maggie-is-the-best');
 
-                 INSERT INTO users (first_name, username, email, password_hash)
-                 VALUES ('Alissa', 'maggiemay', 'alissa6710@gmail.com', 'maggie-is-the-best');
+

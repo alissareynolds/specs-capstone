@@ -1,10 +1,7 @@
 package spec.alissa.backend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import spec.alissa.backend.models.Animal;
 import spec.alissa.backend.repository.AnimalsRepository;
 import spec.alissa.backend.services.AnimalService;
@@ -36,5 +33,15 @@ public class AnimalsController {
     @GetMapping("/api/species/{species}")
     public List<Animal> getAnimalsBySpecies(@PathVariable String species) {
         return animalService.getAnimalsBySpecies(species);
+    }
+
+    @GetMapping("/api/animals/favorite/{userId}")
+    public List<Animal> getAllFavoritesByUser(@PathVariable Integer userId) {
+        return animalService.getAllAnimalsByUser(userId);
+    }
+
+    @PostMapping("/api/animals/favorite/{userId}/{animalId}")
+    public Animal addFavoriteAnimal(@PathVariable Integer userId, @PathVariable Integer animalId) {
+        return animalService.addAnimalsByUserId(userId, animalId);
     }
 }
