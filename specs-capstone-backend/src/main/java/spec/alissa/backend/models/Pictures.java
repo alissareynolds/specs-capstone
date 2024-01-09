@@ -1,9 +1,8 @@
 package spec.alissa.backend.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Collection;
 
 @Entity
 public class Pictures {
@@ -14,12 +13,14 @@ public class Pictures {
 
     private String url;
 
-    private int animalId;
+    @ManyToOne
+    @JoinColumn(name = "animal_id", referencedColumnName = "id")
+    private Animal animal;
 
-    public Pictures(int pictureId, String url, int animalId) {
+    public Pictures(int pictureId, String url, Animal animal) {
         this.pictureId = pictureId;
         this.url = url;
-        this.animalId = animalId;
+        this.animal = animal;
     }
 
     public Pictures() {
@@ -41,11 +42,11 @@ public class Pictures {
         this.url = url;
     }
 
-    public int getAnimalId() {
-        return animalId;
+    public Animal getAnimalId() {
+        return animal;
     }
 
-    public void setAnimalId(int animalId) {
-        this.animalId = animalId;
+    public void setAnimalId(Animal animal) {
+        this.animal = animal;
     }
 }
