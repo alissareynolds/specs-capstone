@@ -28,12 +28,12 @@ public class AdoptionFormController {
         return adoptionFormRepository.findById(id);
     }
 
-//    @PostMapping("/api/adoption-form/add/{userId}")
-//    public AdoptionForm postAdoptionForm(@PathVariable Integer userId, @RequestBody AdoptionFormRequest adoptionFormRequest) {
-//        Optional<User> user = usersRepository.findById(userId);
-//        if (user.isPresent()) {
-//            return adoptionFormService.addAdoptionForm(userId, adoptionFormRequest);
-//        }
-//        return null;
-//    }
+    @PostMapping("/api/adoption-form/add/{userId}")
+    public AdoptionForm postAdoptionForm(@PathVariable Integer userId, @RequestBody AdoptionFormRequest adoptionFormRequest) {
+        Optional<User> user = usersRepository.findById(userId);
+        if (user.isPresent()) {
+            return adoptionFormService.addAdoptionForm(userId, adoptionFormRequest);
+        }
+        return null;
+    }
 }

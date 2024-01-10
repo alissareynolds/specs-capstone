@@ -660,13 +660,13 @@ div.animal-image>img {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .adoption-input {
     height: 28px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     border-top: 1.5px #7c7c7c groove;
     border-left: 1px solid #c3c3c3;
     border-right: 1px solid #c3c3c3;
@@ -705,6 +705,14 @@ div.animal-image>img {
 #adoption-dob {
     margin-top: 8px;
     width: 100%;
+}
+
+#adoption-address {
+    margin-top: 0px;
+}
+
+#adoption-pets {
+    padding-bottom: 20px;
 }
 
 #country {
@@ -754,6 +762,10 @@ div.animal-image>img {
     color: grey;
     height: 30px;
     width: 102%;
+}
+
+#zip-code {
+    margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 450px) {

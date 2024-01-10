@@ -29,5 +29,6 @@ public class AdoptionForm {
     private String streetAddress;
 
 
-
+    public AdoptionForm(Object o, String animalName, String animalBreed, String fullName, String phoneNumber, String email, String occupation, String streetAddress) {
+    }
 }

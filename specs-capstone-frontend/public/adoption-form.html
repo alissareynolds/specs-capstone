@@ -47,7 +47,7 @@
             <div id="adoption-flex">
                 <h1 id="adoption-text">Adoption Application</h1>
 
-                <div id="adoption-form-flex">
+                <form id="adoption-form-flex">
                     <section id="first-half">
 
                         <div class="required-flex" id="animal-name-form">
@@ -88,8 +88,8 @@
                             <p class="required-icon">*</p>
                         </div>
 
-                        <input placeholder="City" type="text" name="adoption-address" class="adoption-input" required>
-                        <input placeholder="Postal/Zip Code" type="text" name="adoption-address" class="adoption-input"
+                        <input placeholder="City" id="city" type="text" name="adoption-address" class="adoption-input" required>
+                        <input placeholder="Postal/Zip Code" id="zip-code" type="text" name="adoption-address" class="adoption-input"
                             required>
 
                         <div class="required-flex" id="adoption-pets">
@@ -100,17 +100,17 @@
                     </section>
 
                     <section id="second-half">
-                        <input type="text" name="animal-name" class="adoption-input" required>
-                        <input type="text" name="animal-species" class="adoption-input" required>
-                        <input type="text" name="full-name" class="adoption-input" required>
-                        <input type="tel" name="phone-number" class="adoption-input">
-                        <input type="email" name="adoption-email" class="adoption-input" required>
-                        <input type="date" name="adoption-dob" class="adoption-input">
-                        <input type="text" name="adoption-job" class="adoption-input" required>
-                        <input placeholder="Street Address" type="text" name="adoption-address" class="adoption-input"
+                        <input id="adp-name" type="text" name="animal-name" class="adoption-input" required>
+                        <input id="adp-species" type="text" name="animal-species" class="adoption-input" required>
+                        <input id="adp-full-name" type="text" name="full-name" class="adoption-input" required>
+                        <input id="adp-number" type="tel" name="phone-number" class="adoption-input">
+                        <input id="adp-email" type="email" name="adoption-email" class="adoption-input" required>
+                        <input id="adp-date" type="date" name="adoption-dob" class="adoption-input">
+                        <input id="adp-job" type="text" name="adoption-job" class="adoption-input" required>
+                        <input id="adp-address" placeholder="Street Address" type="text" name="adoption-address" class="adoption-input"
                             required>
                         <input placeholder="State / Province / Region" type="text" name="adoption-address"
-                            class="adoption-input" required>
+                            class="adoption-input" id="state" required>
 
                         <select name="country" class="adoption-input" id="country">
                             <option value="0" placeholder="Select a country ... " selected="selected">Select a country
@@ -393,11 +393,7 @@
                             <option value="no">No</option>
                         </select>
                     </section>
-
-
-
-
-                </div>
+                </form>
                 <h2 id="disclaimer">Disclaimer</h2>
                 <p id="disclaimer-paragraph">
                     Weatherford Animal Sanctuary is a 501(c)3 Non Profit Organization. We rescue animals who have been
