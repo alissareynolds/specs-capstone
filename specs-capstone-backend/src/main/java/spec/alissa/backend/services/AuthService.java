@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import spec.alissa.backend.requests.LoginRequest;
 import spec.alissa.backend.requests.RegisterRequest;
 import spec.alissa.backend.models.User;
-import spec.alissa.backend.repository.UsersRepository;
+import spec.alissa.backend.repository.UserRepository;
 
 import java.util.Optional;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
 public class AuthService {
 
     @Autowired
-    UsersRepository usersRepository;
+    UserRepository usersRepository;
 
     public User registerAnAccount(RegisterRequest registerRequest) {
         User user = new User(0, registerRequest.getFirstName(), registerRequest.getUsername(), registerRequest.getPassword(), registerRequest.getEmail(), null);

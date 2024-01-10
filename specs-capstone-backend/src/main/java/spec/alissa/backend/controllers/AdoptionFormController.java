@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import spec.alissa.backend.models.AdoptionForm;
 import spec.alissa.backend.models.User;
 import spec.alissa.backend.repository.AdoptionFormRepository;
-import spec.alissa.backend.repository.UsersRepository;
+import spec.alissa.backend.repository.UserRepository;
 import spec.alissa.backend.requests.AdoptionFormRequest;
 import spec.alissa.backend.services.AdoptionFormService;
 
@@ -18,7 +18,7 @@ public class AdoptionFormController {
     AdoptionFormRepository adoptionFormRepository;
 
     @Autowired
-    UsersRepository usersRepository;
+    UserRepository usersRepository;
 
     @Autowired
     AdoptionFormService adoptionFormService;

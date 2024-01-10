@@ -1,4 +1,4 @@
-function getProfile (req, res){
+function getProfile(req) {
     const animalId = req;
     return axios.get(`${baseURL}/api/animals/profile/${animalId}`);
 };
@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     getProfile(animalId).then(result => {
         let profile = result.data
         displayProfile(profile);
-
     });
 });
 
@@ -36,18 +35,25 @@ function generateProfile(animal) {
     <p class="profile-info">${animal.info}</p>
     
     `
+    let pictures = getPictures(animal.animalId);
+    console.log(pictures);
 
-    // animal.pictures.forEach((picture) => {
-    //     const imageContainer = document.createElement('div');
-    //     imageContainer.classList.add('profile-image');
-    //     imageContainer.innerHTML = `
-    //     <div class="profile-img-flex"><img class="profile-imgs" src="${picture.url}"/></div>        
-    //     `;
-    //     profile.appendChild(imageContainer);
-    // });
+    let req = animal.animalId;
+    console.log(req);
 
+    getPictures(req).then(pictures => {
+        pictures.forEach(pictureUrl => {
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('profile-image');
+            imageContainer.innerHTML = `
+            <div class="profile-img-flex"><img class="profile-imgs" src="${pictureUrl}"/></div>        
+            `;
+            profile.appendChild(imageContainer);
+        });
+     });
     return profile;
 };
+
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
@@ -59,5 +65,15 @@ function getQueryVariable(variable) {
     return (false);
 };
 
+function getPictures(req) {
+    const animalId = req;
+    return axios.get(`${baseURL}/api/pictures/${animalId}`)
+        .then(function (response) {
+            let pictures = [];
+            response.data.forEach(picture => {
+                pictures.push(picture.url)
+            });
+            return pictures;
+        });
+ };
 
-  

@@ -11,7 +11,7 @@ import spec.alissa.backend.requests.RegisterRequest;
 import spec.alissa.backend.models.User;
 import spec.alissa.backend.services.AuthService;
 
-@CrossOrigin(origins = "http://127.0.0.1:5501")
+@CrossOrigin(origins = "*")
 
 @RestController
 public class AuthController {

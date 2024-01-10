@@ -2,10 +2,8 @@ package spec.alissa.backend.models;
 
 import jakarta.persistence.*;
 
-import java.util.Collection;
-
 @Entity
-public class Pictures {
+public class Picture {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,16 +12,16 @@ public class Pictures {
     private String url;
 
     @ManyToOne
-    @JoinColumn(name = "animal_id", referencedColumnName = "id")
+    @JoinColumn(name = "animal_id", referencedColumnName = "animalId")
     private Animal animal;
 
-    public Pictures(int pictureId, String url, Animal animal) {
+    public Picture(int pictureId, String url, Animal animal) {
         this.pictureId = pictureId;
         this.url = url;
         this.animal = animal;
     }
 
-    public Pictures() {
+    public Picture() {
     }
 
     public int getPictureId() {

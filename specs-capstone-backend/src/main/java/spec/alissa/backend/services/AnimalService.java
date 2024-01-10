@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spec.alissa.backend.models.Animal;
 import spec.alissa.backend.models.User;
-import spec.alissa.backend.repository.AnimalsRepository;
-import spec.alissa.backend.repository.UsersRepository;
+import spec.alissa.backend.repository.AnimalRepository;
+import spec.alissa.backend.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +15,10 @@ import java.util.Optional;
 public class AnimalService {
 
     @Autowired
-    AnimalsRepository animalsRepository;
+    AnimalRepository animalsRepository;
 
     @Autowired
-    UsersRepository usersRepository;
+    UserRepository usersRepository;
 
     public List<Animal> getAnimalsBySpecies(String species) {
         List<Animal> animalsList = animalsRepository.findAll();

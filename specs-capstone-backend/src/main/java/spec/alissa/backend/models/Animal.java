@@ -18,7 +18,7 @@ public class Animal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer animalId;
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
@@ -40,7 +40,5 @@ public class Animal {
     @ManyToMany(mappedBy="animals")
     @JsonIgnoreProperties({"animals"})
     private List<User> users = new ArrayList<>();
-
-
 
 }

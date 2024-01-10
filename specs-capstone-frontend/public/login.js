@@ -18,7 +18,6 @@ function loginRequest(body) {
         console.log("userId", userId);
     })
 
-
 }
 
 button.addEventListener("click", buttonClicked);

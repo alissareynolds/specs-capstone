@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import spec.alissa.backend.models.AdoptionForm;
 import spec.alissa.backend.models.User;
 import spec.alissa.backend.repository.AdoptionFormRepository;
-import spec.alissa.backend.repository.UsersRepository;
+import spec.alissa.backend.repository.UserRepository;
 import spec.alissa.backend.requests.AdoptionFormRequest;
 
 import java.util.Optional;
@@ -17,7 +17,7 @@ public class AdoptionFormService {
     AdoptionFormRepository adoptionFormRepository;
 
     @Autowired
-    UsersRepository usersRepository;
+    UserRepository usersRepository;
 
     public AdoptionForm addAdoptionForm(Integer userId, AdoptionFormRequest adoptionFormRequest) {
         Optional<User> user = usersRepository.findById(userId);
