@@ -8,16 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
         cardContainer = document.getElementById('card-container');
         cardContainer.addEventListener('click', (event) => {
             const id = event.target.id;
-
             if (id) {
                 animals = animals.filter(animal => animal.animal_id != id);
                 displayCards(animals);
             }
+            location.reload();
         });
     });
 });
 
-function getFavorites (){
+function getFavorites() {
     return axios.get(`${baseURL}/api/animals/favorite/${userId}`);
-
 };

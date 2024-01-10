@@ -20,12 +20,12 @@ public class AuthController {
     AuthService authService;
 
     @PostMapping("/api/login")
-    public User loginToAccount(@Validated @RequestBody LoginRequest loginRequest) {
+    public User loginToAccount(@RequestBody LoginRequest loginRequest) {
         return authService.loginToAnAccount(loginRequest);
     }
 
     @PostMapping("/api/register")
-    public User registerAccount(@Validated @RequestBody RegisterRequest registerRequest) {
+    public User registerAccount(@RequestBody RegisterRequest registerRequest) {
         return authService.registerAnAccount(registerRequest);
     }
 }

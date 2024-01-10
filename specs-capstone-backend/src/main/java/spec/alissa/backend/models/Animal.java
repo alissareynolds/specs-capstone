@@ -36,6 +36,7 @@ public class Animal {
     private String info;
     @Column(nullable = false)
     private String species_name;
+    private boolean favorite;
 
     @ManyToMany(mappedBy="animals")
     @JsonIgnoreProperties({"animals"})

@@ -1,5 +1,5 @@
 const baseURL = "http://localhost:8080"
-let userId;
+let userId = localStorage.getItem("userId");
 
 function displayCards(animals) {
     let container = document.getElementById('card-container');
@@ -13,7 +13,8 @@ function displayCards(animals) {
 function generateCard(animal) {
 
     let heartSrc;
-    if (animal.isfavorite) {
+    console.log(animal.favorite);
+    if (animal.favorite) {
         heartSrc = "/images/heart-on.png";
     } else {
         heartSrc = "/images/heart-off.png"
@@ -41,19 +42,25 @@ function generateCard(animal) {
 
     let heartImage = card.querySelector('.heart');
     heartImage.addEventListener('click', () => {
-        if (animal.isfavorite) {
+        if (animal.favorite) {
             axios.delete(`http://localhost:8080/api/animals/favorite/${userId}/${animal.animalId}`).then(() => {
                 heartImage.setAttribute("src", "/images/heart-off.png");
-                animal.isfavorite = false;
+                animal.favorite = false;
+
             })
         } else {
+
             axios.post(`http://localhost:8080/api/animals/favorite/${userId}/${animal.animalId}`)
                 .then(() => {
                     heartImage.setAttribute("src", "/images/heart-on.png");
-                    animal.isfavorite = true;
+                    animal.favorite = true;
                 });
         }
     });
     return card;
 
 }
+
+function getFavorites() {
+    return axios.get(`${baseURL}/api/animals/favorite/${userId}`);
+};

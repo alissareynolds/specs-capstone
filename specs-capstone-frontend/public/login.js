@@ -13,11 +13,11 @@ function buttonClicked() {
 }
 
 function loginRequest(body) {
-    axios.post(`${baseURL}/api/login`, body).then(({ data }) => { console.log(data);
+    axios.post(`${baseURL}/api/login`, body).then(({ data }) => { 
         userId = data.userId;
-        console.log("userId", userId);
+        localStorage.clear();
+        localStorage.setItem("userId", JSON.stringify(userId));
     })
-
 }
 
 button.addEventListener("click", buttonClicked);

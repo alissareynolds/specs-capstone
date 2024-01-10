@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://127.0.0.1:5501")
+@CrossOrigin(origins = "*")
 public class AnimalController {
 
     @Autowired
@@ -41,11 +41,16 @@ public class AnimalController {
 
     @GetMapping("/api/animals/favorite/{userId}")
     public List<Animal> getAllFavoritesByUser(@PathVariable Integer userId) {
-        return userRepository.findById(userId).map()
+        return animalService.getAllAnimalsByUser(userId);
     }
 
     @PostMapping("/api/animals/favorite/{userId}/{animalId}")
     public Animal addFavoriteAnimal(@PathVariable Integer userId, @PathVariable Integer animalId) {
         return animalService.addAnimalsByUserId(userId, animalId);
+    }
+
+    @DeleteMapping("/api/animals/favorite/{userId}/{animalId}")
+    public Animal deleteFavoriteAnimal(@PathVariable Integer userId, @PathVariable Integer animalId) {
+        return animalService.deleteAnimalByUserId(userId, animalId);
     }
 }
