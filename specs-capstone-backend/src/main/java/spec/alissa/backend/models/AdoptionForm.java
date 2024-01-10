@@ -14,17 +14,20 @@ public class AdoptionForm {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long formId;
     @Column(nullable = false)
-    private String fullName;
+    private String animalName;
     @Column(nullable = false)
-    private String streetAddress;
+    private String animalBreed;
+    @Column(nullable = false)
+    private String fullName;
     @Column(nullable = false)
     private String phoneNumber;
     @Column(nullable = false)
     private String email;
+    private String birthdate;
     @Column(nullable = false)
     private String occupation;
-    @Column(nullable = false)
-    private String animalName;
-    @Column(nullable = false)
-    private String animalBreed;
+    private String streetAddress;
+
+
+
 }

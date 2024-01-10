@@ -33,7 +33,10 @@ function generateProfile(animal) {
     <h3 class="profile-weight">${animal.weight}</h3></section>
     
     <p class="profile-info">${animal.info}</p>
-    
+    <a href="adoption-form.html" class="info-flex">
+    <button type="button" class="adoption-form-button">Adoption Form</button></a>
+
+
     `
     let pictures = getPictures(animal.animalId);
     console.log(pictures);

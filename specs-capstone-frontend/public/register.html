@@ -9,6 +9,7 @@
     <title>Weatherford Animal Sanctuary</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
+    <script src="register.js"></script>
 </head>
 
 <body>
@@ -46,11 +47,11 @@
         <div id="register-container">
             <h1 id="register-greeting">Create Account</h1>
             <form id="registration-form">
-                <input type="text" placeholder="Name" class="register-field">
-                <input type="email" placeholder="Email" class="register-field">
-                <input type="text" placeholder="Username" class="register-field">
-                <input type="password" placeholder="Password" class="register-field">
-                <input id="register-button" type="button" value="Sign Up">
+                <input id="register-name" type="text" placeholder="Name" class="register-field">
+                <input id="register-email" type="email" placeholder="Email" class="register-field">
+                <input id="register-username" type="text" placeholder="Username" class="register-field">
+                <input id="register-password" type="password" placeholder="Password" class="register-field">
+                <input id="register-button" type="button" value="Sign Up" onclick="buttonClicked()">
         
             </form>
             <div id="register-form-flex">

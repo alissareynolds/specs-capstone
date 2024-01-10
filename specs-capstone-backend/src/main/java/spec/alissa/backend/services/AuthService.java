@@ -16,7 +16,7 @@ public class AuthService {
     UserRepository usersRepository;
 
     public User registerAnAccount(RegisterRequest registerRequest) {
-        User user = new User(0, registerRequest.getFirstName(), registerRequest.getUsername(), registerRequest.getPassword(), registerRequest.getEmail(), null);
+        User user = new User(0, registerRequest.getEmail(), registerRequest.getFirstName(), registerRequest.getUsername(), registerRequest.getPassword(), null);
         usersRepository.save(user);
         return user;
     }
