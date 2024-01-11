@@ -35,5 +35,4 @@ public class User {
             inverseJoinColumns = { @JoinColumn(name = "FK_animal") })
     @JsonIgnoreProperties({"users"})
     private List<Animal> animals = new ArrayList<>();
-
 }

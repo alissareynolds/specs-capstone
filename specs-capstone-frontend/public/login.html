@@ -34,11 +34,11 @@
                     alt="weatherford animal rescue logo"></a>
         </div>
         <div id="top-right" class="header">
-            <li>
+            <li id="favorites">
                 <a href="favorites.html"><img id="favorites-logo" src="/images/heart-on.png"
                         alt="favorites page link image"></a>
             </li>
-            <li class="nav-ul">
+            <li id="user-container" class="nav-ul">
                 <a href="login.html">LOGIN</a>
             </li>
         </div>
@@ -59,7 +59,8 @@
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="username"><br>
                     <label for="password">Password:</label><br>
-                    <input type="text" id="password" name="password">
+                    <input type="password" id="password" name="password">
+                    <p id="error-message"></p>
                     <div id="form-flex">
                         <input type="checkbox" id="remember-me" name="remember-me">
                         <label id="remember-me-label" for="remember-me">Remember Me</label>

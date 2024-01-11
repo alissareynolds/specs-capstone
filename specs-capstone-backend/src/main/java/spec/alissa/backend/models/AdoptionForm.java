@@ -26,9 +26,16 @@ public class AdoptionForm {
     private String birthdate;
     @Column(nullable = false)
     private String occupation;
+    @Column(nullable = false)
     private String streetAddress;
-
-
-    public AdoptionForm(Object o, String animalName, String animalBreed, String fullName, String phoneNumber, String email, String occupation, String streetAddress) {
-    }
+    @Column(nullable = false)
+    private String city;
+    @Column(nullable = false)
+    private String state;
+    @Column(nullable = false)
+    private String zipCode;
+    @Column(nullable = false)
+    private String country;
+    @Column(nullable = false)
+    private boolean hasPet;
 }

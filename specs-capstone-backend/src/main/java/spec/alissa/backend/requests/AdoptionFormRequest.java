@@ -13,11 +13,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AdoptionFormRequest {
 
-    private String fullName;
-    private String streetAddress;
-    private String phoneNumber;
-    private String email;
-    private String occupation;
     private String animalName;
     private String animalBreed;
+    private String fullName;
+    private String phoneNumber;
+    private String email;
+    private String birthdate;
+    private String occupation;
+    private String streetAddress;
+    private String city;
+    private String state;
+    private String zipCode;
+    private String country;
+    private boolean hasPet;
+
 }

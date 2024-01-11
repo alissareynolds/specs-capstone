@@ -12,6 +12,7 @@ import spec.alissa.backend.services.AdoptionFormService;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class AdoptionFormController {
 
     @Autowired

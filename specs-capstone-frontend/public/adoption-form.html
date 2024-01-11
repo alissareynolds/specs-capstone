@@ -9,6 +9,7 @@
     <title>Weatherford Animal Sanctuary</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
+    <script src="adoption-form.js"></script>
 </head>
 
 <body>
@@ -33,11 +34,11 @@
                     alt="weatherford animal rescue logo"></a>
         </div>
         <div id="top-right" class="header">
-            <li>
+            <li id="favorites">
                 <a href="favorites.html"><img id="favorites-logo" src="/images/heart-on.png"
                         alt="favorites page link image"></a>
             </li>
-            <li class="nav-ul">
+            <li id="user-container" class="nav-ul">
                 <a href="login.html">LOGIN</a>
             </li>
         </div>
@@ -408,7 +409,7 @@
                     right animal. Incomplete forms will be discarded and not reviewed.
                 </p>
                 <div id="button-flex">
-                    <input id="adoption-submit" type="submit" value="Submit"></input>
+                    <button id="adoption-submit" onclick="buttonClicked()" type="submit" value="Submit">Submit</button>
                 </div>
 
             </div>

@@ -18,5 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function getFavorites() {
-    return axios.get(`${baseURL}/api/animals/favorite/${userId}`);
+    console.log(user);
+    return axios.get(`${baseURL}/api/animals/favorite/${user.userId}`);
 };

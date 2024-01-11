@@ -1,5 +1,5 @@
-const form = document.querySelector("login-form");
-const button = document.getElementById("form-button");
+let form;
+let button;
 
 function buttonClicked() {
     const username = document.querySelector("#username");
@@ -9,17 +9,26 @@ function buttonClicked() {
         "password": password.value
     }
     loginRequest(body);
-    location.replace("index.html");
 }
 
 function loginRequest(body) {
-    axios.post(`${baseURL}/api/login`, body).then(({ data }) => { 
-        userId = data.userId;
-        localStorage.clear();
-        localStorage.setItem("userId", JSON.stringify(userId));
+    axios.post(`${baseURL}/api/login`, body).then(({ data }) => {
+        if (data.status = 201) {
+            user = data;
+            localStorage.clear();
+            localStorage.setItem("user", JSON.stringify(user));
+            location.replace("index.html");
+        }
+    }).catch((error) => {
+        const errorMessage = document.querySelector("#error-message");
+        errorMessage.innerText = error.response.data.message;
+        console.log(error);
     })
+
 }
 
-button.addEventListener("click", buttonClicked);
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    form = document.querySelector("#login-form");
+    button = document.getElementById("form-button");
+    button.addEventListener("click", buttonClicked);
+})
